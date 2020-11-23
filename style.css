@@ -61,7 +61,7 @@ body {
     text-align: center;
     width: 85%;
     max-width: 350px;
-    box-shadow: 0 50px 40px -20px #0004;
+    box-shadow: 0 50px 40px -5px #0012;
     z-index: 2;
 }
 
@@ -81,7 +81,7 @@ body {
 
 .details {
     font-weight: 400;
-    padding: 1rem 0 1.5rem;
+    padding: 0.5rem 0 1.25rem;
     border-bottom: 1px solid #eee;
 }
 
