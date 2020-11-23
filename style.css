@@ -1,0 +1,36 @@
+:root {
+    /* Typography */
+    --ff: 'Kumbh Sans', sans-serif;
+    /* Colors */
+    --clr-primary: hsl(185, 75%, 39%);
+    --clr-primary-dark: hsl(229, 23%, 23%);
+    --clr-primary-muted: hsl(227, 10%, 46%);
+    --clr-neutral: hsl(0, 0%, 59%);
+    /* Spacing */
+    /* Shadows */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--ff);
+    font-size: 1.125rem;
+}
+
+
+/* Attribution */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
