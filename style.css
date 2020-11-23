@@ -7,7 +7,8 @@
     --clr-primary-muted: hsl(227, 10%, 46%);
     --clr-neutral: hsl(0, 0%, 59%);
     /* Spacing */
-    --spc-bg-elements: 40%;
+    --spc-bg-elements-w: 50vw;
+    --spc-bg-elements-h: 40vh;
     /* Shadows */
 }
 
@@ -20,31 +21,35 @@
 }
 
 body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     color: var(--clr-primary-muted);
     font-family: var(--ff);
     font-size: 1.125rem;
     line-height: 1.6;
-    background-color: var(--clr-primary);
 }
 
-body::before {
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--clr-primary);
+    overflow: hidden;
+}
+
+.wrapper::before {
     position: absolute;
     content: url(images/bg-pattern-top.svg);
-    bottom: var(--spc-bg-elements);
-    right: var(--spc-bg-elements);
+    bottom: var(--spc-bg-elements-h);
+    right: var(--spc-bg-elements-w);
 }
 
-body::after {
+.wrapper::after {
     position: absolute;
     content: url(images/bg-pattern-bottom.svg);
-    top: var(--spc-bg-elements);
-    left: var(--spc-bg-elements);
+    top: var(--spc-bg-elements-h);
+    left: var(--spc-bg-elements-w);
 }
 
 .profile {
@@ -55,6 +60,7 @@ body::after {
     background-repeat: no-repeat;
     text-align: center;
     width: 85%;
+    max-width: 350px;
     box-shadow: 0 50px 40px -20px #0004;
     z-index: 2;
 }
@@ -75,7 +81,7 @@ body::after {
 
 .details {
     font-weight: 400;
-    padding: 1.5rem;
+    padding: 1rem 0 1.5rem;
     border-bottom: 1px solid #eee;
 }
 
